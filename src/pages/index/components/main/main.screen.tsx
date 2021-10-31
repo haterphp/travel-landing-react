@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
         position: "absolute",
         zIndex: -1,
         objectPosition: "center center",
-        filter: "brightness(.8)"
+        filter: "brightness(.75)"
     },
     headline: {
         textTransform: "uppercase",
@@ -49,7 +49,7 @@ interface BookVariantGridItemProps {
 
 const BookVariantGridItem = (props: BookVariantGridItemProps) => (
     <Grid item xs>
-        <Box padding={"0 30px"}>
+        <Box padding={"0 30px"} display={"flex"} alignItems={"center"} height={"100%"}>
             { !props.children
                 ? <Box>
                     <Typography variant={"body2"}>{props.col}</Typography>

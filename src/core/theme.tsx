@@ -26,11 +26,15 @@ const headlineFontFamily = [ "Cormorant Garamond", "serif" ].join(', ');
 export const theme = createTheme({
     components: {
         MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 0,
+                }
+            },
             variants: [
                 {
                     props: {color: 'primary', variant: 'contained'},
                     style: {
-                        borderRadius: 0,
                         padding: "12px 30px",
                         color: "#fff"
                     }
