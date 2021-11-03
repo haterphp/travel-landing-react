@@ -29,6 +29,7 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: 0,
+                    boxShadow: "none"
                 }
             },
             variants: [
@@ -37,6 +38,19 @@ export const theme = createTheme({
                     style: {
                         padding: "12px 30px",
                         color: "#fff"
+                    }
+                },
+                {
+                    props: {color: 'secondary', variant: 'contained'},
+                    style: {
+                        padding: "12px 30px",
+                        color: "#8299ac",
+                        border: "solid 1px #8299ac",
+                        background: "#fff",
+                        "&:hover": {
+                            color: "#fff",
+                            background: "#8299ac"
+                        }
                     }
                 }
             ]
@@ -54,6 +68,14 @@ export const theme = createTheme({
                 LinkComponent: LinkBehavior,
             },
         },
+        MuiStepIcon: {
+            styleOverrides: {
+                text: {
+                    fontSize: 12,
+                    fill: "#fff"
+                },
+            },
+        }
     },
     palette: {
         text: {
@@ -87,7 +109,8 @@ export const theme = createTheme({
         },
         h5: {
             fontSize: "1.1em",
-            color: "#C9AD82"
+            color: "#C9AD82",
+            fontWeight: 600,
         },
         caption: {
             fontSize: "1.1em"
@@ -99,6 +122,6 @@ export const theme = createTheme({
         body2: {
             fontSize: "1.1rem",
             color: "#8299ac"
-        }
+        },
     }
 });

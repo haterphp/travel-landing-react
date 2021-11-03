@@ -4,13 +4,13 @@ import {Box} from "@material-ui/core";
 import Header from "./components/header/header.component";
 
 const useStyles = makeStyles(theme => {
+    console.log(theme)
     return {
         layout: {
             display: 'flex',
             flexDirection: 'column',
             minHeight: '100vh',
             position: "relative",
-            overflowX: "hidden"
         }
     }
 
