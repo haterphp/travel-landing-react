@@ -1,10 +1,11 @@
-import {createTheme, LinkProps} from "@material-ui/core";
+import {createMuiTheme, createTheme, Theme} from "@material-ui/core/styles";
 import "@material-ui/core/styles/createPalette";
 import React from "react";
 import {
     Link as RouterLink,
     LinkProps as RouterLinkProps,
 } from 'react-router-dom';
+import {LinkProps} from "@material-ui/core";
 
 declare module "@material-ui/core/styles/createPalette" {
     interface TypeText {
@@ -74,6 +75,9 @@ export const theme = createTheme({
                     fontSize: 12,
                     fill: "#fff"
                 },
+                root: {
+                    color: "#8299ac"
+                }
             },
         }
     },

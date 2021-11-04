@@ -1,8 +1,8 @@
 import Router from "./router";
-import {ThemeProvider} from "@material-ui/core/styles";
 import {theme} from "./theme";
+import {ThemeProvider} from "@material-ui/core";
 
-function Wrap(){
+function Wrap() {
     return (
         <ThemeProvider theme={theme}>
             <Router/>

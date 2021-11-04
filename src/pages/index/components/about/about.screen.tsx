@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 function About() {
 
-    const {Image} = AboutScreenMedia;
+    const {Image, Steps} = AboutScreenMedia;
 
     const {
         screen,
@@ -61,7 +61,7 @@ function About() {
             <Box className={clsx(screen, screenLast)}>
                 <Container maxWidth={"xl"}>
                     <Typography variant={"h2"} align={"center"} marginBottom={7}>Как это работает?</Typography>
-                    <Stepper/>
+                    <Stepper media={Steps}/>
                 </Container>
             </Box>
         </>

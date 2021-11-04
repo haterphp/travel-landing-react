@@ -3,8 +3,7 @@ import {LayoutProps} from "./layout.props";
 import {Box} from "@material-ui/core";
 import Header from "./components/header/header.component";
 
-const useStyles = makeStyles(theme => {
-    console.log(theme)
+const useStyles = makeStyles((theme) => {
     return {
         layout: {
             display: 'flex',
