@@ -12,6 +12,7 @@ export interface PromotionCardProps {
 const useStyles = (theme: Theme) => makeStyles({
     card: {
         position: "relative",
+        borderRadius: 0 + " !important",
         "&:hover > $cardContent": {
             visibility: "visible",
             opacity: 1,
@@ -32,7 +33,7 @@ const useStyles = (theme: Theme) => makeStyles({
         flexDirection: "column"
     },
     cardMedia: {
-        zIndex: 1,
+        filter: "brightness(.75)"
     }
 })();
 

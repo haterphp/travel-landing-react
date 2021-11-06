@@ -87,7 +87,7 @@ function MainScreen(): JSX.Element {
                     <Box className={screenBookVariant} bgcolor={"common.white"}>
                         <Grid container>
                             <BookVariantGridItem col={'Регион'} value={"Какой-то регион"}/>
-                            <BookVariantGridItem col={'Даты похода'} value={"20.11.2021 - 25.11.2021"}/>
+                            <BookVariantGridItem col={'Даты похода'} value={"с 20 по 25 ноября"}/>
                             <BookVariantGridItem col={'Уровень сложности'} value={"Средний"}/>
                             <BookVariantGridItem col={'Стоимость'} value={"5000₽ за человека"}/>
                             <BookVariantGridItem>
