@@ -3,7 +3,7 @@ import {useStepperStyles} from "./styles";
 import {StepProps} from "./step.props";
 
 
-function SelectRegionStep({ControlPanel}: StepProps) {
+function EnterAdditionalOptionsStep({ControlPanel}: StepProps) {
 
     const {
         stepContent,
@@ -12,7 +12,7 @@ function SelectRegionStep({ControlPanel}: StepProps) {
 
     return (
         <Box className={stepContent}>
-            <Typography variant={"h3"} marginBottom={3}>Выбераете желаемый регион для похода</Typography>
+            <Typography variant={"h3"} marginBottom={3}>Выберете дополнительные услуги</Typography>
             <Typography>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi explicabo maxime
                 rem, repellat repudiandae. Accusantium ad alias, aliquid architecto asperiores blanditiis consequuntur
                 corporis deleniti dignissimos dolorum eaque eos esse et excepturi exercitationem fugiat illum labore
@@ -24,6 +24,6 @@ function SelectRegionStep({ControlPanel}: StepProps) {
 }
 
 export default {
-    label: "Выбераете желаемый регион для похода",
-    component: SelectRegionStep
+    label: "Выберете дополнительные услуги",
+    component: EnterAdditionalOptionsStep
 };

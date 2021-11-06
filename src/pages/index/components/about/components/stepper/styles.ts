@@ -9,7 +9,8 @@ export const useStepperStyles = makeStyles({
     stepContent: {
         display: "flex",
         flexDirection: "column",
-        height: '100%'
+        height: '100%',
+        paddingRight: 100
     },
     stepControlPanel: {
         marginTop: "auto"

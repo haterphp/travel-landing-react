@@ -1,7 +1,12 @@
 import {Box, Button, Grid, Step, StepButton, StepLabel, Stepper, Typography, useTheme} from "@material-ui/core";
+
 import SelectDateStep from './stepper/select-date.step';
 import SelectParticipantsStep from './stepper/select-participants.step';
 import SelectRegionStep from './stepper/select-region.step';
+import BookZonesStep from './stepper/book-zones.step';
+import EnterAdditionalOptionsStep from './stepper/enter-additional-options.step';
+import FinishStep from './stepper/finish.step';
+
 import React, {useState} from "react";
 import {HorizontalBookingStepperProps} from "./stepper.props";
 import {ControlPanelPropsInterface, StepProps} from "./stepper/step.props";
@@ -21,6 +26,9 @@ const steps: StepType[] = [
     SelectDateStep,
     SelectParticipantsStep,
     SelectRegionStep,
+    BookZonesStep,
+    EnterAdditionalOptionsStep,
+    FinishStep,
 ];
 
 function ControlPanel({ className, setActiveStep, activeStep }: ControlPanelPropsInterface){
@@ -61,7 +69,16 @@ function HorizontalBookingStepper({ media }: HorizontalBookingStepperProps) {
         <Box>
             <Box marginTop={7}>
                 <Grid container paddingTop={7}>
-                    <Grid item xs={12} lg={6}>
+                    <Grid item xs={12} lg={8}>
+                        {
+                            steps[activeStep].component(
+                                {
+                                    ControlPanel: ({ className }) => <ControlPanel className={className} setActiveStep={setActiveStep} activeStep={activeStep}/>
+                                }
+                            )
+                        }
+                    </Grid>
+                    <Grid item xs={12} lg={4}>
                         <Box>
                             <Stepper nonLinear activeStep={activeStep} orientation="vertical">
                                 {
@@ -77,13 +94,6 @@ function HorizontalBookingStepper({ media }: HorizontalBookingStepperProps) {
                                 }
                             </Stepper>
                         </Box>
-                    </Grid>
-                    <Grid item xs={12} lg={6}>
-                        {
-                            steps[activeStep].component({
-                                ControlPanel: ({ className }) => <ControlPanel className={className} setActiveStep={setActiveStep} activeStep={activeStep}/>
-                            })
-                        }
                     </Grid>
                 </Grid>
 

@@ -5,11 +5,24 @@ import {
     Link as RouterLink,
     LinkProps as RouterLinkProps,
 } from 'react-router-dom';
-import {LinkProps} from "@material-ui/core";
+import {LinkProps, PaletteColorOptions} from "@material-ui/core";
 
 declare module "@material-ui/core/styles/createPalette" {
     interface TypeText {
         muted: string;
+    }
+
+    interface CustomPalette{
+        light: PaletteColorOptions;
+    }
+
+    interface Palette extends CustomPalette{}
+    interface PaletteOptions extends CustomPalette{}
+}
+
+declare module "@material-ui/core/Button/Button" {
+    interface ButtonPropsColorOverrides{
+        light: true;
     }
 }
 
@@ -53,8 +66,14 @@ export const theme = createTheme({
                             background: "#8299ac"
                         }
                     }
-                }
-            ]
+                },
+                {
+                    props: {color: 'light'},
+                    style: {
+                        padding: "12px 30px",
+                    }
+                },
+            ],
         },
         MuiLink: {
             styleOverrides: {
@@ -88,7 +107,8 @@ export const theme = createTheme({
         },
         primary: {
             main: "#c9ad82"
-        }
+        },
+        light: createTheme().palette.augmentColor({ color: { main: "#fff" } })
     },
     typography: {
         fontFamily: [
