@@ -1,4 +1,6 @@
 import React from "react";
+import {jsx} from "@emotion/react";
+import JSX = jsx.JSX;
 
 export interface SliderSettings extends React.HTMLAttributes<HTMLDivElement>{
     dots?: boolean;
@@ -12,4 +14,5 @@ export interface SliderSettings extends React.HTMLAttributes<HTMLDivElement>{
     swipeToSlide?: boolean;
     className?: string;
     rtl?: boolean;
+    appendDots?: (dots: any) => JSX.Element
 }

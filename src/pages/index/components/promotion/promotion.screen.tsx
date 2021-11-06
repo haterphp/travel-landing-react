@@ -6,7 +6,9 @@ import Slider from "../../../../components/slider/slider.component";
 function PromotionScreen(){
     return(
         <Box marginBottom={20}>
-            <Slider>
+            <Slider
+                appendDots={dots => (<Box bottom={-50}>{dots}</Box>)}
+                >
                 {
                     PromotionMedia.map((props: PromotionCardProps) => (
                         <PromotionCard {...props}/>

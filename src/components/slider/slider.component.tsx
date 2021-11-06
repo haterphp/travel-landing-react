@@ -3,6 +3,7 @@ import {SliderSettings} from "./slider.props";
 import SlickSlider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {Box} from "@material-ui/core";
 
 const baseSettings: SliderSettings = {
     dots: true,
