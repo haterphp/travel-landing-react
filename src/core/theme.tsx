@@ -10,6 +10,7 @@ import {LinkProps, PaletteColorOptions} from "@material-ui/core";
 declare module "@material-ui/core/styles/createPalette" {
     interface TypeText {
         muted: string;
+        light: string;
     }
 
     interface CustomPalette{
@@ -98,12 +99,13 @@ export const theme = createTheme({
                     color: "#8299ac"
                 }
             },
-        }
+        },
     },
     palette: {
         text: {
             primary: "#3c5e79",
-            muted: "#8299ac"
+            muted: "#8299ac",
+            light: "#f5fafe"
         },
         primary: {
             main: "#c9ad82"
