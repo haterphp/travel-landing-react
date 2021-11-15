@@ -12,7 +12,7 @@ function EnterAdditionalOptionsStep({ControlPanel}: StepProps) {
 
     return (
         <Box className={stepContent}>
-            <Typography variant={"h3"} marginBottom={3}>Выберете дополнительные услуги</Typography>
+            <Typography variant={"h3"} marginBottom={3}>Выбирете дополнительные услуги</Typography>
             <Typography>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi explicabo maxime
                 rem, repellat repudiandae. Accusantium ad alias, aliquid architecto asperiores blanditiis consequuntur
                 corporis deleniti dignissimos dolorum eaque eos esse et excepturi exercitationem fugiat illum labore
@@ -24,6 +24,6 @@ function EnterAdditionalOptionsStep({ControlPanel}: StepProps) {
 }
 
 export default {
-    label: "Выберете дополнительные услуги",
+    label: "Выбирете дополнительные услуги",
     component: EnterAdditionalOptionsStep
 };

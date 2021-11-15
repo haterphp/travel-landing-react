@@ -12,7 +12,7 @@ function SelectParticipantsStep({ControlPanel}: StepProps) {
 
     return (
         <Box className={stepContent}>
-            <Typography variant={"h3"} marginBottom={3}>Выбераете количество участников</Typography>
+            <Typography variant={"h3"} marginBottom={3}>Выбираете количество участников</Typography>
             <Typography>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi explicabo maxime
                 rem, repellat repudiandae. Accusantium ad alias, aliquid architecto asperiores blanditiis consequuntur
                 corporis deleniti dignissimos dolorum eaque eos esse et excepturi exercitationem fugiat illum labore
@@ -24,6 +24,6 @@ function SelectParticipantsStep({ControlPanel}: StepProps) {
 }
 
 export default {
-    label: "Выберете количество участников",
+    label: "Выбирете количество участников",
     component: SelectParticipantsStep
 };

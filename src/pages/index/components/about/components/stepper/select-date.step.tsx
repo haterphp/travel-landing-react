@@ -12,7 +12,7 @@ function SelectDateStep({ ControlPanel }: StepProps){
 
     return (
         <Box className={stepContent}>
-            <Typography variant={"h3"} marginBottom={3}>Выбераете нужные вам даты</Typography>
+            <Typography variant={"h3"} marginBottom={3}>Выбираете нужные вам даты</Typography>
             <Typography>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi explicabo maxime rem, repellat repudiandae. Accusantium ad alias, aliquid architecto asperiores blanditiis consequuntur corporis deleniti dignissimos dolorum eaque eos esse et excepturi exercitationem fugiat illum labore laborum modi odio omnis perspiciatis quam ratione repudiandae rerum soluta tempora totam? Modi, voluptatibus?</Typography>
             <ControlPanel className={stepControlPanel} />
         </Box>
@@ -20,6 +20,6 @@ function SelectDateStep({ ControlPanel }: StepProps){
 }
 
 export default {
-    label: "Выберете даты",
+    label: "Выбирете даты",
     component: SelectDateStep
 };
